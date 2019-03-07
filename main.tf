@@ -121,7 +121,7 @@ resource "aws_instance" "web" {
   ami = "${lookup(var.aws_amis, var.aws_region)}"
 
   # The name of our SSH keypair 
-  key_name = "${aws_key_pair.auth.id}"
+  key_name = ""
 
   # Our Security group to allow HTTP and SSH access
   vpc_security_group_ids = ["${aws_security_group.default.id}"]
